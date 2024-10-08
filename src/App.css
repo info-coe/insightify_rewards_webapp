@@ -1,3 +1,56 @@
 body{
     font-family: 'Poppins';
 }
+
+#formdiv {
+  padding: 10px 0px;
+}
+
+.input-field {
+  position: relative;
+  margin-bottom: 25px;
+  border-radius: 80px;
+}
+
+.input-field input {
+  width: calc(100% - 2px);
+  padding: 12px 0px 12px 20px;
+  gap: 30px;
+  border: none;
+  outline: none;
+  border-radius: 80px;
+  border: 1px solid #65558F;
+  background: none;
+  font-size: 18px;
+}
+
+.input-field label {
+  position: absolute;
+  /* top: 12px;
+  left: 20px;
+  padding: 0 5px;
+  color: #999;
+  transition: 0.3s;
+  pointer-events: none; */
+  top: -10px;
+  left: 30px;
+  font-size: 14px;
+  color: #333;
+  background: #FEF7FF;
+  padding: 0 5px;
+}
+
+#loginBtn {
+  width: calc(100% - 180px);
+  padding: 14px 0px 14px 0px;
+  gap: 30px;
+  border: none;
+  outline: none;
+  border-radius: 80px;
+  background: #65558F;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+}

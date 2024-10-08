@@ -1,15 +1,15 @@
 import React, { useRef } from "react";
+import navigateBack from "./Images/Back.png";
+import Navbar from "./Navbar";
 
 export default function RewardsOtpVerification() {
   const mobileStyles = {
     display: "block",
     padding: "20px",
-    textAlign: "center",
   };
 
   const desktopMessageStyles = {
     display: "block",
-    textAlign: "center",
     padding: "50px",
     color: "#ff5722",
     fontSize: "20px",
@@ -36,14 +36,15 @@ export default function RewardsOtpVerification() {
 
   return (
     <div>
+      <Navbar icon={navigateBack} title="OTP verification" linkto="/login" />
       {isMobile ? (
         <div style={mobileStyles}>
           <h2
-            style={{ fontSize: "18px", color: "#1D1B20", lineHeight: "27px" }}
+            style={{ fontSize: "21px", color: "#1D1B20", lineHeight: "27px", fontWeight:"600" }}
           >
             Verify Your Identity with OTP
           </h2>
-          <p style={{ fontSize: "14px", color: "#1D1B20", lineHeight: "21px" }}>
+          <p style={{ fontSize: "16px", color: "#1D1B20", lineHeight: "21px", fontWeight:"400" }}>
             Enter the one-time password (OTP) sent to your registered mobile
             number to proceed.{" "}
           </p>
@@ -78,6 +79,7 @@ export default function RewardsOtpVerification() {
           </div>
 
           {/* Button */}
+          <div style={{textAlign:"center"}}>
           <button
             style={{
               padding: "15px 50px 15px 50px",
@@ -90,6 +92,7 @@ export default function RewardsOtpVerification() {
           >
             Verify OTP
           </button>
+          </div>
         </div>
       ) : (
         // Desktop and Tablet Message
