@@ -2,6 +2,7 @@ import React from "react";
 import navigateBack from "./Images/Back.png";
 import tiersImage from "./Images/Group17.png";
 import Navbar from "./Navbar";
+import tierLogo from "./Images/Token.png";
 
 export default function RewardsTier() {
   return (
@@ -23,7 +24,7 @@ export default function RewardsTier() {
           <img src={tiersImage} alt="Tiers" />
         </div>
         <div>
-          <img src="" alt=""></img>
+          <img src={tierLogo} alt="" style={{margin:"10px 6px"}}></img>
           <p style={{fontSize:"16px", fontWeight:"400", lineHeight:"21px"}}>
             980 <span style={{fontSize:"16px", fontWeight:"600", lineHeight:"21px"}}>tks to silver</span>
           </p>
