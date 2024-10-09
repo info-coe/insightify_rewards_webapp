@@ -101,7 +101,7 @@ export default function RewardsHome({ username, tickets }) {
           <h2 style={userStyles}>{username} John Wick</h2>
 
           {/* Ticket Box */}
-          <div style={boxStyles}>
+          {/* <div style={boxStyles}>
             <div
               style={{
                 display: "flex",
@@ -143,6 +143,84 @@ export default function RewardsHome({ username, tickets }) {
               </span>
             </div>
           </div>
+          <div className="d-flex justify-content-between">
+            <img src={ellipse3} alt="no-ellipse" width="120px" height="150px"/>
+            <img src={ellipse1} alt="no-ellipse" width="120px" height="150px"/>
+
+          </div> */}
+          <div style={{ position: "relative", zIndex: 1 }}>
+  <div style={boxStyles}>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+      }}
+    >
+      <div>
+        <img src={token} alt="no-token" style={iconStyles} />
+        <img src={bronze} alt="no-bronze" style={iconStyles} />
+      </div>
+      <span
+        style={{
+          fontSize: "24px",
+          color: "#65558F",
+          fontWeight: "600",
+        }}
+      >
+        20{" "}
+        <span
+          style={{
+            color: "#1D1B20",
+            fontSize: "12px",
+            fontWeight: "600",
+          }}
+        >
+          Tks
+        </span>
+        <p
+          style={{
+            fontSize: "12px",
+            lineHeight: "18px",
+            fontWeight: "600",
+            color: "#1D1B20",
+          }}
+        >
+          Equals $1
+        </p>
+      </span>
+    </div>
+  </div>
+
+  {/* Images that will overlap the first div */}
+  <div
+    className="d-flex justify-content-between"
+    style={{
+      position: "absolute",
+      top: "50%", // Adjust this value to vertically center the images
+      left: 0,
+      right: 0,
+      transform: "translateY(-50%)", // Center the images vertically
+      zIndex: 0,
+      pointerEvents: "none", // Prevent mouse events on images
+    }}
+  >
+    <img
+      src={ellipse3}
+      alt="no-ellipse"
+      width="150px"
+      height="220px"
+      style={{ marginLeft: "-60px" }} // Negative margin to push image out left
+    />
+    <img
+      src={ellipse1}
+      alt="no-ellipse"
+      width="150px"
+      height="220px"
+      style={{ marginRight: "-60px" }} // Negative margin to push image out right
+    />
+  </div>
+</div>
 
           {/* Earn and Redeem Boxes */}
           <div
@@ -237,11 +315,7 @@ export default function RewardsHome({ username, tickets }) {
             </div>
           </div>
           </Link>
-          <div className="d-flex justify-content-between">
-            <img src={ellipse3} alt="no-ellipse" width="120px" height="150px"/>
-            <img src={ellipse1} alt="no-ellipse" width="120px" height="150px"/>
-
-          </div>
+         
         </div>
       ) : (
         // Desktop and Tablet Message
