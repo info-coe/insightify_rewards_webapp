@@ -16,7 +16,7 @@ export default function RewardsCreateAccount() {
     justifyContent: "center",
     flexDirection: "column",
   };
-  
+
   const [values, setValues] = useState({
     name: "",
     email: "",
@@ -93,7 +93,7 @@ export default function RewardsCreateAccount() {
         // Desktop and Tablet Message
         <div style={desktopMessageStyles}>
           <p>This page is only viewable on mobile devices.</p>
-          <p>Please switch to a mobile device to verify your OTP.</p>
+          <p>Please switch to a mobile device.</p>
         </div>
       )}
     </div>

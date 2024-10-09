@@ -17,7 +17,7 @@ export default function RewardsTier() {
     justifyContent: "center",
     flexDirection: "column",
   };
-  
+
   return (
     <div>
       {isMobile ? (
@@ -77,7 +77,7 @@ export default function RewardsTier() {
         // Desktop and Tablet Message
         <div style={desktopMessageStyles}>
           <p>This page is only viewable on mobile devices.</p>
-          <p>Please switch to a mobile device to verify your OTP.</p>
+          <p>Please switch to a mobile device.</p>
         </div>
       )}
     </div>

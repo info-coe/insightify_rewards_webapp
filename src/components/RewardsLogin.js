@@ -16,7 +16,7 @@ export default function RewardsLogin() {
     justifyContent: "center",
     flexDirection: "column",
   };
-  
+
   const [values, setValues] = useState({
     phone: "",
   });
@@ -31,7 +31,7 @@ export default function RewardsLogin() {
 
   const formSubmit = (event) => {
     event.preventDefault();
-    alert(values.phone);
+    // alert(values.phone);
     navigate("/userverification", { state: values });
   };
 
@@ -67,7 +67,7 @@ export default function RewardsLogin() {
                   id="phone"
                   name="phone"
                   autoComplete="off"
-                  pattern="+91[0-9]{10}"
+                  pattern="/^\+91[0-9]{10}$/"
                   title="Please enter numerics only"
                   minLength={13}
                   maxLength={13}
@@ -88,7 +88,7 @@ export default function RewardsLogin() {
         // Desktop and Tablet Message
         <div style={desktopMessageStyles}>
           <p>This page is only viewable on mobile devices.</p>
-          <p>Please switch to a mobile device to verify your OTP.</p>
+          <p>Please switch to a mobile device.</p>
         </div>
       )}
     </div>

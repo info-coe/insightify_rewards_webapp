@@ -8,8 +8,7 @@ import { useLocation } from "react-router-dom";
 export default function RewardsOtpVerification() {
   const location = useLocation();
   const values = location.state;
-  console.log(values);
-  const [phoneNumber, setPhoneNumber] = useState(values.phone || "");
+  const [phoneNumber, setPhoneNumber] = useState(values ? values.phone : "");
   const [otp, setOtp] = useState(new Array(6).fill(""));
   const [verificationId, setVerificationId] = useState(null);
   const [message, setMessage] = useState("");
@@ -117,15 +116,17 @@ export default function RewardsOtpVerification() {
     }
   };
 
-  useEffect(() => {
-    if (
-      phoneNumber !== "" ||
-      phoneNumber !== null ||
-      phoneNumber !== undefined
-    ) {
-      handleSendOtp();
-    }
-  }, []);
+  // uncomment the below useEffect hook for the mobile verification through otp functionality 
+
+  // useEffect(() => {
+  //   if (
+  //     phoneNumber !== "" ||
+  //     phoneNumber !== null ||
+  //     phoneNumber !== undefined
+  //   ) {
+  //     handleSendOtp();
+  //   }
+  // }, []);
 
   const handleVerifyOtp = async (e) => {
     e.preventDefault();
