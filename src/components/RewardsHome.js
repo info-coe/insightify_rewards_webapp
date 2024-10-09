@@ -1,73 +1,88 @@
-import React from 'react'
-import token from './Images/Token.png'
-import bronze from './Images/Bronze.png'
+import React from "react";
+import token from "./Images/Token.png";
+import bronze from "./Images/Bronze.png";
+import earn from "./Images/Earn.png";
+import arrow from "./Images/Vector.png";
+import gittbox from "./Images/gittbox.png";
 export default function RewardsHome({ username, tickets }) {
-
-    const mobileStyles = {
-    backgroundColor: '#f9f9f9',
+  const mobileStyles = {
+    // backgroundColor: '#f9f9f9',
     // textAlign: 'center',
-    padding:'20px'
+    padding: "20px",
   };
 
   const welcomeStyles = {
-    fontSize: '18px',
-    color: '#1D1B20',
-    marginBottom: '20px',
-    lineHeight:'24px',
-    fontWeight:'400'
+    fontSize: "18px",
+    color: "#1D1B20",
+    marginBottom: "20px",
+    lineHeight: "24px",
+    fontWeight: "400",
   };
 
   const userStyles = {
-    fontSize:'24px',
-    fontWeight: '600',
-    color:'#1D1B20',
-    lineHeight:'32px'
-  }
+    fontSize: "24px",
+    fontWeight: "600",
+    color: "#1D1B20",
+    lineHeight: "32px",
+  };
 
   const boxStyles = {
-    border: '4px solid var(--Schemes-Primary, #65558F)',  // Overall border for the box (could be transparent or another color)
-    padding: '15px 20px 15px 10px',
-    marginBottom: '20px',
-    borderRadius: '15px',
+    border: "2px solid var(--Schemes-Primary, #65558F)", 
+    padding: "15px 20px 15px 10px",
+    marginBottom: "20px",
+    borderRadius: "15px",
   };
-  
-  const  earnboxStyles ={
 
+  const earnboxStyles = {
+    width: "160px",
+    height: "100px",
+    backgroundColor: "#ECE6F0",
+    borderRadius: "15px",
+    padding: "20px",
+    alignItems: "center",
   };
 
   const iconStyles = {
-    width:'60px',
-    height:'55px',
-    margin:'5px'
+    width: "60px",
+    height: "55px",
+    margin: "5px",
   };
-
+  const progressboxStyles = {
+    width: "345px",
+    height: "100px",
+    backgroundColor: "#ECE6F0",
+    borderRadius: "25px",
+    padding: "15px",
+    gap: "10px",
+    lineHeight: "20px",
+  };
   const progressBarContainer = {
-    width: '100%',
-    height: '10px',
-    backgroundColor: '#e0e0e0',
-    borderRadius: '5px',
-    overflow: 'hidden',
+    width: "198px", 
+    height: "8px", 
+    background: "#CD7F324D",
+    borderRadius: "40px", 
+    overflow: "hidden", 
+    marginTop: "5px",
   };
 
   const progressBar = {
-    height: '100%',
-    width: '70%', // Example progress (70%)
-    backgroundColor: '#4caf50',
-    transition: 'width 0.5s',
+    width: "10%", 
+    height: "100%", 
+    backgroundColor: "#4caf50", 
+    transition: "width 0.3s ease", 
   };
 
   const desktopMessageStyles = {
-    textAlign: 'center',
-    padding: '50px',
-    color: '#ff5722',
-    fontSize: '20px',
-    backgroundColor: '#f0f0f0',
-    height: '100vh',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'column',
-    color: '#333',
+    textAlign: "center",
+    padding: "50px",
+    color: "#ff5722",
+    fontSize: "20px",
+    backgroundColor: "#f0f0f0",
+    height: "100vh",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "column",
   };
 
   // Detect screen size dynamically
@@ -75,7 +90,7 @@ export default function RewardsHome({ username, tickets }) {
 
   return (
     <div>
-           {isMobile ? (
+      {isMobile ? (
         <div style={mobileStyles}>
           {/* Welcome Message */}
           <h2 style={welcomeStyles}>Hello,</h2>
@@ -83,43 +98,138 @@ export default function RewardsHome({ username, tickets }) {
 
           {/* Ticket Box */}
           <div style={boxStyles}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
               <div>
-                <img src={token} alt='no-token' style={iconStyles}/>
-                <img src={bronze} alt='no-bronze' style={iconStyles}/>
+                <img src={token} alt="no-token" style={iconStyles} />
+                <img src={bronze} alt="no-bronze" style={iconStyles} />
               </div>
-              <span style={{ fontSize: '24px',color:'#65558F',fontWeight:'600' }}>20 <span style={{color:'#1D1B20',fontSize:'12px',fontWeight:'600'}}>Tks</span><p style={{fontSize:'12px',lineHeight:'18px',fontWeight:'600',color:'#1D1B20'}}>Equals $1</p>
+              <span
+                style={{
+                  fontSize: "24px",
+                  color: "#65558F",
+                  fontWeight: "600",
+                }}
+              >
+                20{" "}
+                <span
+                  style={{
+                    color: "#1D1B20",
+                    fontSize: "12px",
+                    fontWeight: "600",
+                  }}
+                >
+                  Tks
+                </span>
+                <p
+                  style={{
+                    fontSize: "12px",
+                    lineHeight: "18px",
+                    fontWeight: "600",
+                    color: "#1D1B20",
+                  }}
+                >
+                  Equals $1
+                </p>
               </span>
             </div>
-            
           </div>
 
           {/* Earn and Redeem Boxes */}
-          <div style={{ display: 'flex', justifyContent: 'space-around', marginBottom: '20px' }}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+              marginBottom: "20px",
+            }}
+          >
             <div style={earnboxStyles}>
-              <div style={iconStyles}>
-                <i className="bi bi-cash"></i> {/* Bootstrap Cash Icon */}
+              <div
+                className="d-flex justify-content-between"
+                style={{ padding: "9px 7px 9px 7px", gap: "10px" }}
+              >
+                <div>
+                  <img src={earn} alt="no-earn" />
+                  <p
+                    style={{
+                      color: "#000000",
+                      fontSize: "14px",
+                      fontWeight: "600",
+                      lineHeight: "21px",
+                    }}
+                  >
+                    Earn
+                  </p>
+                </div>
+                <div>
+                  <img src={arrow} alt="no-arrow" />
+                </div>
               </div>
-              <h4>Earn</h4>
-              <p>Earn rewards by participating.</p>
             </div>
-            <div style={boxStyles}>
-              <div style={iconStyles}>
-                <i className="bi bi-arrow-repeat"></i> {/* Bootstrap Redeem Icon */}
+            <div style={earnboxStyles}>
+              <div
+                className="d-flex justify-content-between"
+                style={{ padding: "9px 7px 9px 7px", gap: "10px" }}
+              >
+                <div>
+                  <img src={gittbox} alt="no-gittbox" />
+                  <p
+                    style={{
+                      color: "#000000",
+                      fontSize: "14px",
+                      fontWeight: "600",
+                      lineHeight: "21px",
+                    }}
+                  >
+                    Redeem
+                  </p>
+                </div>
+                <div>
+                  <img src={arrow} alt="no-arrow" />
+                </div>
               </div>
-              <h4>Redeem</h4>
-              <p>Redeem your rewards here.</p>
             </div>
           </div>
 
           {/* Progress Box */}
-          <div style={boxStyles}>
-            <h4>Progress</h4>
-            <div style={progressBarContainer}>
-              <div style={progressBar}></div>
+          <div style={progressboxStyles}>
+            <div className="d-flex align-items-center justify-content-between">
+              <div className="d-flex" style={{ lineHeight: "1px" }}>
+                <img src={bronze} alt="no-bronze" style={iconStyles} />
+                <div style={{ marginLeft: "10px" }}>
+                  <p
+                    style={{
+                      color: "#000000",
+                      fontSize: "14px",
+                      fontWeight: "600",
+                      lineHeight: "21px",
+                    }}
+                  >
+                    Bronze
+                  </p>
+                  <p
+                    style={{
+                      color: "#1D1B2099",
+                      fontWeight: "400",
+                      fontSize: "12px",
+                    }}
+                  >
+                    980 tks to silver
+                  </p>
+                  <div style={progressBarContainer}>
+                    <div style={progressBar}></div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right side (arrow) */}
+              <img src={arrow} alt="no-arrow" />
             </div>
-            <p style={{ marginTop: '5px' }}>70% of your next reward!</p>
           </div>
         </div>
       ) : (
@@ -130,5 +240,5 @@ export default function RewardsHome({ username, tickets }) {
         </div>
       )}
     </div>
-  )
+  );
 }
