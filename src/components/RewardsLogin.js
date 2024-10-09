@@ -67,7 +67,7 @@ export default function RewardsLogin() {
                   id="phone"
                   name="phone"
                   autoComplete="off"
-                  pattern="/^\+91[0-9]{10}$/"
+                  pattern="+91[0-9]{10}"
                   title="Please enter numerics only"
                   minLength={13}
                   maxLength={13}
