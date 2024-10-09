@@ -19,6 +19,7 @@ export default function RewardsLogin() {
   const formSubmit = (event) => {
     event.preventDefault();
     alert(values.phone);
+    navigate("/userverification", { state: values })
   };
 
   return (
@@ -39,10 +40,10 @@ export default function RewardsLogin() {
                 id="phone"
                 name="phone"
                 autoComplete="off"
-                pattern="[0-9]{10}"
+                pattern="+91[0-9]{10}"
                 title="Please enter numerics only"
-                minLength={10}
-                maxLength={10}
+                minLength={13}
+                maxLength={13}
                 required
                 onChange={handleInput}
               />
