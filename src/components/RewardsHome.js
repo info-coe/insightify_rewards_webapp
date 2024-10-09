@@ -31,6 +31,7 @@ export default function RewardsHome({ username, tickets }) {
     padding: "15px 20px 15px 10px",
     marginBottom: "20px",
     borderRadius: "15px",
+    boxShadow: "10px 0 15px -5px var(--Schemes-Primary, rgba(255, 105, 180, 0.5)), -10px 0 15px -5px var(--Schemes-Primary, rgba(255, 105, 180, 0.5))", // Shadow on left and right only
   };
 
   const earnboxStyles = {
@@ -94,7 +95,7 @@ export default function RewardsHome({ username, tickets }) {
         <div style={mobileStyles}>
           {/* Welcome Message */}
           <h2 style={welcomeStyles}>Hello,</h2>
-          <h2 style={userStyles}>{username}</h2>
+          <h2 style={userStyles}>{username} John Wick</h2>
 
           {/* Ticket Box */}
           <div style={boxStyles}>
