@@ -4,6 +4,9 @@ import bronze from "./Images/Bronze.png";
 import earn from "./Images/Earn.png";
 import arrow from "./Images/Vector.png";
 import gittbox from "./Images/gittbox.png";
+import ellipse3 from "./Images/Ellipse 3.png"
+import ellipse1  from "./Images/Ellipse 1.png"
+import { Link } from "react-router-dom";
 export default function RewardsHome({ username, tickets }) {
   const mobileStyles = {
     // backgroundColor: '#f9f9f9',
@@ -31,7 +34,7 @@ export default function RewardsHome({ username, tickets }) {
     padding: "15px 20px 15px 10px",
     marginBottom: "20px",
     borderRadius: "15px",
-    boxShadow: "10px 0 15px -5px var(--Schemes-Primary, rgba(255, 105, 180, 0.5)), -10px 0 15px -5px var(--Schemes-Primary, rgba(255, 105, 180, 0.5))", // Shadow on left and right only
+    // boxShadow: "10px 0 15px -5px var(--Schemes-Primary, rgba(255, 105, 180, 0.5)), -10px 0 15px -5px var(--Schemes-Primary, rgba(255, 105, 180, 0.5))", // Shadow on left and right only
   };
 
   const earnboxStyles = {
@@ -198,6 +201,7 @@ export default function RewardsHome({ username, tickets }) {
           </div>
 
           {/* Progress Box */}
+          <Link to="/tier" style={{textDecoration:'none'}}>
           <div style={progressboxStyles}>
             <div className="d-flex align-items-center justify-content-between">
               <div className="d-flex" style={{ lineHeight: "1px" }}>
@@ -231,6 +235,12 @@ export default function RewardsHome({ username, tickets }) {
               {/* Right side (arrow) */}
               <img src={arrow} alt="no-arrow" />
             </div>
+          </div>
+          </Link>
+          <div className="d-flex justify-content-between">
+            <img src={ellipse3} alt="no-ellipse" width="120px" height="150px"/>
+            <img src={ellipse1} alt="no-ellipse" width="120px" height="150px"/>
+
           </div>
         </div>
       ) : (
