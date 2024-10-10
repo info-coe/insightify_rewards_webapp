@@ -4,8 +4,8 @@ import bronze from "./Images/Bronze.png";
 import earn from "./Images/Earn.png";
 import arrow from "./Images/Vector.png";
 import gittbox from "./Images/gittbox.png";
-import ellipse3 from "./Images/Ellipse 3.png"
-import ellipse1  from "./Images/Ellipse 1.png"
+import ellipse3 from "./Images/Ellipse 3.png";
+import ellipse1 from "./Images/Ellipse 1.png";
 import { Link } from "react-router-dom";
 export default function RewardsHome({ username, tickets }) {
   const mobileStyles = {
@@ -30,7 +30,7 @@ export default function RewardsHome({ username, tickets }) {
   };
 
   const boxStyles = {
-    border: "2px solid var(--Schemes-Primary, #65558F)", 
+    border: "2px solid var(--Schemes-Primary, #65558F)",
     padding: "15px 20px 15px 10px",
     marginBottom: "20px",
     borderRadius: "15px",
@@ -61,19 +61,19 @@ export default function RewardsHome({ username, tickets }) {
     lineHeight: "20px",
   };
   const progressBarContainer = {
-    width: "198px", 
-    height: "8px", 
+    width: "198px",
+    height: "8px",
     background: "#CD7F324D",
-    borderRadius: "40px", 
-    overflow: "hidden", 
+    borderRadius: "40px",
+    overflow: "hidden",
     marginTop: "5px",
   };
 
   const progressBar = {
-    width: "10%", 
-    height: "100%", 
-    backgroundColor: "#4caf50", 
-    transition: "width 0.3s ease", 
+    width: "10%",
+    height: "100%",
+    backgroundColor: "#4caf50",
+    transition: "width 0.3s ease",
   };
 
   const desktopMessageStyles = {
@@ -149,78 +149,78 @@ export default function RewardsHome({ username, tickets }) {
 
           </div> */}
           <div style={{ position: "relative", zIndex: 1 }}>
-  <div style={boxStyles}>
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-      }}
-    >
-      <div>
-        <img src={token} alt="no-token" style={iconStyles} />
-        <img src={bronze} alt="no-bronze" style={iconStyles} />
-      </div>
-      <span
-        style={{
-          fontSize: "24px",
-          color: "#65558F",
-          fontWeight: "600",
-        }}
-      >
-        20{" "}
-        <span
-          style={{
-            color: "#1D1B20",
-            fontSize: "12px",
-            fontWeight: "600",
-          }}
-        >
-          Tks
-        </span>
-        <p
-          style={{
-            fontSize: "12px",
-            lineHeight: "18px",
-            fontWeight: "600",
-            color: "#1D1B20",
-          }}
-        >
-          Equals $1
-        </p>
-      </span>
-    </div>
-  </div>
+            <div style={boxStyles}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <div>
+                  <img src={token} alt="no-token" style={iconStyles} />
+                  <img src={bronze} alt="no-bronze" style={iconStyles} />
+                </div>
+                <span
+                  style={{
+                    fontSize: "24px",
+                    color: "#65558F",
+                    fontWeight: "600",
+                  }}
+                >
+                  20{" "}
+                  <span
+                    style={{
+                      color: "#1D1B20",
+                      fontSize: "12px",
+                      fontWeight: "600",
+                    }}
+                  >
+                    Tks
+                  </span>
+                  <p
+                    style={{
+                      fontSize: "12px",
+                      lineHeight: "18px",
+                      fontWeight: "600",
+                      color: "#1D1B20",
+                    }}
+                  >
+                    Equals $1
+                  </p>
+                </span>
+              </div>
+            </div>
 
-  {/* Images that will overlap the first div */}
-  <div
-    className="d-flex justify-content-between"
-    style={{
-      position: "absolute",
-      top: "50%", // Adjust this value to vertically center the images
-      left: 0,
-      right: 0,
-      transform: "translateY(-50%)", // Center the images vertically
-      zIndex: 0,
-      pointerEvents: "none", // Prevent mouse events on images
-    }}
-  >
-    <img
-      src={ellipse3}
-      alt="no-ellipse"
-      width="150px"
-      height="220px"
-      style={{ marginLeft: "-60px" }} // Negative margin to push image out left
-    />
-    <img
-      src={ellipse1}
-      alt="no-ellipse"
-      width="150px"
-      height="220px"
-      style={{ marginRight: "-60px" }} // Negative margin to push image out right
-    />
-  </div>
-</div>
+            {/* Images that will overlap the first div */}
+            <div
+              className="d-flex justify-content-between"
+              style={{
+                position: "absolute",
+                top: "50%", // Adjust this value to vertically center the images
+                left: 0,
+                right: 0,
+                transform: "translateY(-50%)", // Center the images vertically
+                zIndex: 0,
+                pointerEvents: "none", // Prevent mouse events on images
+              }}
+            >
+              <img
+                src={ellipse3}
+                alt="no-ellipse"
+                width="150px"
+                height="220px"
+                style={{ marginLeft: "-60px" }} // Negative margin to push image out left
+              />
+              <img
+                src={ellipse1}
+                alt="no-ellipse"
+                width="150px"
+                height="220px"
+                style={{ marginRight: "-60px" }} // Negative margin to push image out right
+              />
+            </div>
+          </div>
 
           {/* Earn and Redeem Boxes */}
           <div
@@ -279,43 +279,53 @@ export default function RewardsHome({ username, tickets }) {
           </div>
 
           {/* Progress Box */}
-          <Link to="/tier" style={{textDecoration:'none'}}>
-          <div style={progressboxStyles}>
-            <div className="d-flex align-items-center justify-content-between">
-              <div className="d-flex" style={{ lineHeight: "1px" }}>
-                <img src={bronze} alt="no-bronze" style={iconStyles} />
-                <div style={{ marginLeft: "10px" }}>
-                  <p
-                    style={{
-                      color: "#000000",
-                      fontSize: "14px",
-                      fontWeight: "600",
-                      lineHeight: "21px",
-                    }}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginBottom: "20px",
+            }}
+          >
+            <Link to="/tier" style={{ textDecoration: "none" }}>
+              <div style={progressboxStyles}>
+                <div className="d-flex align-items-center justify-content-between">
+                  <div
+                    className="d-flex text-center"
+                    style={{ lineHeight: "1px" }}
                   >
-                    Bronze
-                  </p>
-                  <p
-                    style={{
-                      color: "#1D1B2099",
-                      fontWeight: "400",
-                      fontSize: "12px",
-                    }}
-                  >
-                    980 tks to silver
-                  </p>
-                  <div style={progressBarContainer}>
-                    <div style={progressBar}></div>
+                    <img src={bronze} alt="no-bronze" style={iconStyles} />
+                    <div style={{ marginLeft: "10px" }}>
+                      <p
+                        style={{
+                          color: "#000000",
+                          fontSize: "14px",
+                          fontWeight: "600",
+                          lineHeight: "21px",
+                        }}
+                      >
+                        Bronze
+                      </p>
+                      <p
+                        style={{
+                          color: "#1D1B2099",
+                          fontWeight: "400",
+                          fontSize: "12px",
+                        }}
+                      >
+                        980 tks to silver
+                      </p>
+                      <div style={progressBarContainer}>
+                        <div style={progressBar}></div>
+                      </div>
+                    </div>
                   </div>
+
+                  {/* Right side (arrow) */}
+                  <img src={arrow} alt="no-arrow" />
                 </div>
               </div>
-
-              {/* Right side (arrow) */}
-              <img src={arrow} alt="no-arrow" />
-            </div>
+            </Link>
           </div>
-          </Link>
-         
         </div>
       ) : (
         // Desktop and Tablet Message
